@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>SharkBot公式</title>
+        <style>
+
+            .animated-text {
+                position: relative;
+                animation: slide 2s alternate-reverse;
+            }
+
+            @keyframes slide {
+                0% {
+                    left: 0px;
+                }
+                100% {
+                    left: 1900px;
+                }
+            }
+
+            .bar_ue {
+                padding: 0.5em 1em;
+                margin: 2em 0;
+                color: #5989cf;
+                background: #c6e4ff;
+                border-bottom: solid 6px #aac5de;
+                border-radius: 9px;
+            }
+
+            .BarButtons {
+                padding: 0.5em 1em;
+                margin: 2em 0;
+                color: #3a85f5;
+                background: #35424d;
+                border-bottom: solid 6px #0d7ae0;
+                border-radius: 9px;
+            }
+
+            a {
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            button {
+                padding: 5px;
+                border-radius: 10px;
+                background-color: #153149;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function Install() {
+                alert("導入ありがとうございます！");
+                location.href = "https://discord.com/application-directory/1322100616369147924";
+            }
+        </script>
+        <div class="bar_ue animated-text">
+            <h1>SharkBotのサイト</h1>
+            <div class="BarButtons">
+                <h3>このBotを選ぶ理由</h3>
+                <p>
+                    このBotは、<h4>「すべての機能が無料」</h4>なことが特徴です。<br><br>
+                    MOe6 (名前は伏せる)にある便利機能が、<h4>「SharkBotでは無料」</h4>なんです。
+                </p><br>
+                気に入ってくれたかな？ =>
+                <button onclick="Install();">導入する！</button>
+            </div>
+            <div class="BarButtons">
+                <h3>Discordサーバー</h3><br>
+                <iframe src="https://discord.com/widget?id=1323780339285360660&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div><br>
+        </div>
+    </body>
+</html>
