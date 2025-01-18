@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>カスタムコマンドビルダー</title>
+    </head>
+    <body>
+        <select id="seelctcmd">
+            <option value="Echo">発言</option>
+            <option value="GetArg1">引数1を取得</option>
+        </select>
+        <button onclick="set()">Select</button>
+        <hr>
+        <div id="setting"></div>
+        <hr>
+        コード:<br>
+        <textarea id="code"></textarea>
+        <script>
+            function set() {
+                val = document.getElementById('seelctcmd').value
+                if (val == "Echo") {
+                    document.getElementById("setting").innerHTML = `Text: <input type="text" id="echotext"><button onclick="add_yourname()">UserName</button><button onclick="add_youravatar()">Avatar</button><button onclick="add_arg1()">引数1</button><br><button onclick="add_code()">Add Code</button>`;
+                } else if (val == "GetArg1") {
+                    document.getElementById("code").value = document.getElementById("code").value + "getargs1" + "\n";
+                }
+            }
+
+            function add_code() {
+                val = document.getElementById('seelctcmd').value
+                if (val == "Echo") {
+                    text = document.getElementById('echotext').value
+                    document.getElementById("setting").innerHTML = ``;
+                    document.getElementById("code").value = document.getElementById("code").value + "echo>" + text + "\n";
+                }
+            }
+
+            function add_yourname() {
+                val = document.getElementById('seelctcmd').value
+                if (val == "Echo") {
+                    document.getElementById("echotext").value = document.getElementById("echotext").value + "[Name]";
+                }
+            }
+
+            function add_youravatar() {
+                val = document.getElementById('seelctcmd').value
+                if (val == "Echo") {
+                    document.getElementById("echotext").value = document.getElementById("echotext").value + "[Avatar]";
+                }
+            }
+
+            function add_arg1() {
+                val = document.getElementById('seelctcmd').value
+                if (val == "Echo") {
+                    document.getElementById("echotext").value = document.getElementById("echotext").value + "[arg1]";
+                }
+            }
+        </script>
+    </body>
+</html>
